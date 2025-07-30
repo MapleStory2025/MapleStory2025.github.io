@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MapleStory（枫物语）- 服务器官网</title>
-    <!-- 图标 -->
-    <link rel="icon" href="/MapleStory-Web/static/img/icon.png" type="image/png">
-    <!-- 样式 -->
-    <link rel="stylesheet" href="/MapleStory-Web/static/css/style.css">
-    <!-- FontAwesome CDN -->
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" type="image/png">
+    <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -27,11 +24,10 @@
         </div>
     </div>
 
-    <!-- 导航 -->
     <header class="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <img src="/MapleStory-Web/static/img/icon.png" alt="MapleStory Logo">
+                <img src="{{ url_for('static', filename='img/icon.png') }}" alt="MapleStory Logo">
                 <span>MapleStory（枫物语）</span>
             </a>
             <nav>
@@ -49,27 +45,28 @@
         </div>
     </header>
 
-    <!-- 英雄区 -->
     <section id="hero" class="hero-section">
         <div class="particles" id="particles"></div>
         <div class="gradient-overlay"></div>
         <div class="container">
-            <img src="/MapleStory-Web/static/img/title.png" alt="MapleStory" class="title-image">
+            <img src="{{ url_for('static', filename='img/title.png') }}" alt="MapleStory" class="title-image">
             <h1>欢迎来到 MapleStory（枫物语）服务器！</h1>
             <p>与我们一同探索充满奇幻与冒险的像素世界！</p>
             <a href="#join-us" class="btn pulse">立即加入 <i class="fas fa-arrow-down"></i></a>
-            <div class="scroll-indicator"></div>
+            <div class="scroll-indicator">
+
         </div>
     </section>
 
-    <!-- 原版生存 -->
     <section id="vanilla-survival" class="gameplay-section">
         <div class="container">
             <h2><i class="fas fa-tree"></i> 1.20.1 原版生存</h2>
             <div class="content-wrapper">
                 <div class="image-container">
-                    <img src="/MapleStory-Web/static/img/Vanilla.png" alt="原版生存" class="rotate-image">
-                    <div class="image-overlay"><p>纯粹的Minecraft体验</p></div>
+                    <img src="{{ url_for('static', filename='img/Vanilla.png') }}" alt="原版生存" class="rotate-image">
+                    <div class="image-overlay">
+                        <p>纯粹的Minecraft体验</p>
+                    </div>
                 </div>
                 <div class="text-content">
                     <p>体验纯粹的 Minecraft 乐趣，没有复杂的模组，只有最原始的生存挑战与创造自由。建造你的梦想家园，探索广阔的世界，与朋友一同冒险！</p>
@@ -82,7 +79,6 @@
         </div>
     </section>
 
-    <!-- 模组生存 -->
     <section id="mod-survival" class="gameplay-section light-bg">
         <div class="container">
             <h2><i class="fas fa-cogs"></i> 1.20.1 模组生存</h2>
@@ -95,21 +91,24 @@
                     </ul>
                 </div>
                 <div class="image-container">
-                    <img src="/MapleStory-Web/static/img/Mods.png" alt="模组生存" class="rotate-image">
-                    <div class="image-overlay"><p>丰富的模组内容</p></div>
+                    <img src="{{ url_for('static', filename='img/Mods.png') }}" alt="模组生存" class="rotate-image">
+                    <div class="image-overlay">
+                        <p>丰富的模组内容</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 起床战争 -->
     <section id="bedwars" class="gameplay-section">
         <div class="container">
             <h2><i class="fas fa-trophy"></i> 1.8.9 起床战争</h2>
             <div class="content-wrapper">
                 <div class="image-container">
-                    <img src="/MapleStory-Web/static/img/BedWays.png" alt="起床战争" class="rotate-image">
-                    <div class="image-overlay"><p>刺激的PVP对战</p></div>
+                    <img src="{{ url_for('static', filename='img/BedWays.png') }}" alt="起床战争" class="rotate-image">
+                    <div class="image-overlay">
+                        <p>刺激的PVP对战</p>
+                    </div>
                 </div>
                 <div class="text-content">
                     <p>紧张刺激的 PvP 体验！保护你的床，摧毁对手的床，成为最后的胜利者。快节奏的对战，考验你的策略与操作！</p>
@@ -122,51 +121,57 @@
         </div>
     </section>
 
-    <!-- 加入我们 -->
     <section id="join-us" class="join-us-section light-bg">
         <div class="container">
             <h2>加入我们</h2>
             <p class="subtitle">欢迎所有玩家加入 MapleStory（枫物语）大家庭！</p>
-
+            
             <div class="join-options">
                 <div class="join-option">
-                    <div class="icon-circle"><i class="fas fa-copy"></i></div>
+                    <div class="icon-circle">
+                        <i class="fas fa-copy"></i>
+                    </div>
                     <h3>复制群号</h3>
                     <p>服务器QQ群号：<span>152639910</span></p>
                     <button class="btn copy-btn" data-clipboard-text="152639910">复制群号</button>
                 </div>
-
+                
                 <div class="join-option">
-                    <div class="icon-circle"><i class="fab fa-qq"></i></div>
+                    <div class="icon-circle">
+                        <i class="fab fa-qq"></i>
+                    </div>
                     <h3>快捷加群</h3>
                     <p>一键加入QQ群</p>
-                    <a href="https://qm.qq.com/q/6QPPLMT1s" target="_blank" class="btn">加入QQ群</a>
+                    <a href="https://qm.qq.com/q/6QPPLMT1s" target="_blank" class="btn">
+                        加入QQ群
+                    </a>
                 </div>
-
+                
                 <div class="join-option">
-                    <div class="icon-circle"><i class="fas fa-qrcode"></i></div>
+                    <div class="icon-circle">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
                     <h3>扫描二维码</h3>
                     <p>使用QQ扫码加入</p>
-                    <img src="/MapleStory-Web/static/img/QR.png" alt="QQ群二维码" class="qr-code">
+                    <img src="{{ url_for('static', filename='img/QR.png') }}" alt="QQ群二维码" class="qr-code">
                 </div>
             </div>
-
+            
+            
             <p class="join-footer">期待在服务器中与你相遇！</p>
         </div>
     </section>
 
-    <!-- 页脚 -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="/MapleStory-Web/static/img/icon.png" alt="MapleStory Logo">
+                    <img src="{{ url_for('static', filename='img/icon.png') }}" alt="MapleStory Logo">
                     <div>
                         <h3>MapleStory（枫物语）</h3>
                         <p>探索无限可能的方块世界</p>
                     </div>
                 </div>
-
                 <div class="footer-links">
                     <h4>快速链接</h4>
                     <ul>
@@ -176,7 +181,6 @@
                         <li><a href="#bedwars"><i class="fas fa-trophy"></i> 起床战争</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-contact">
                     <h4>联系我们</h4>
                     <div class="social-icons">
@@ -186,7 +190,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2025 MapleStory（枫物语）服务器. All rights reserved.</p>
                 <p>Designed with <i class="fas fa-heart"></i> for Minecraft Players</p>
@@ -194,19 +197,21 @@
         </div>
     </footer>
 
-    <!-- JS -->
-    <script src="/MapleStory-Web/static/js/script.js"></script>
-    <!-- clipboard.js CDN -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
     <script>
         // 初始化 clipboard.js
         new ClipboardJS('.copy-btn');
-        // 复制成功提示
+        
+        // 添加复制成功提示
         document.querySelectorAll('.copy-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
+            btn.addEventListener('click', function() {
                 const originalText = this.textContent;
                 this.innerHTML = '<i class="fas fa-check"></i> 已复制';
-                setTimeout(() => { this.textContent = originalText; }, 2000);
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 2000);
             });
         });
     </script>
