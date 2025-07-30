@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapleStory（枫物语）- 服务器官网</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+        </div>
+        <div class="loader-text">枫物语 · 加载中</div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="{{ url_for('static', filename='img/icon.png') }}" alt="MapleStory Logo">
+                <span>MapleStory（枫物语）</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#hero">首页</a></li>
+                    <li><a href="#vanilla-survival">原版生存</a></li>
+                    <li><a href="#mod-survival">模组生存</a></li>
+                    <li><a href="#bedwars">起床战争</a></li>
+                    <li><a href="#join-us">加入我们</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="particles" id="particles"></div>
+        <div class="gradient-overlay"></div>
+        <div class="container">
+            <img src="{{ url_for('static', filename='img/title.png') }}" alt="MapleStory" class="title-image">
+            <h1>欢迎来到 MapleStory（枫物语）服务器！</h1>
+            <p>与我们一同探索充满奇幻与冒险的像素世界！</p>
+            <a href="#join-us" class="btn pulse">立即加入 <i class="fas fa-arrow-down"></i></a>
+            <div class="scroll-indicator">
+
+        </div>
+    </section>
+
+    <section id="vanilla-survival" class="gameplay-section">
+        <div class="container">
+            <h2><i class="fas fa-tree"></i> 1.20.1 原版生存</h2>
+            <div class="content-wrapper">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='img/Vanilla.png') }}" alt="原版生存" class="rotate-image">
+                    <div class="image-overlay">
+                        <p>纯粹的Minecraft体验</p>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <p>体验纯粹的 Minecraft 乐趣，没有复杂的模组，只有最原始的生存挑战与创造自由。建造你的梦想家园，探索广阔的世界，与朋友一同冒险！</p>
+                    <ul class="features">
+                        <li><i class="fas fa-check-circle"></i> 纯净原版体验</li>
+                        <li><i class="fas fa-check-circle"></i> 24小时稳定运行</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mod-survival" class="gameplay-section light-bg">
+        <div class="container">
+            <h2><i class="fas fa-cogs"></i> 1.20.1 模组生存</h2>
+            <div class="content-wrapper reverse-order">
+                <div class="text-content">
+                    <p>如果你渴望更多元的玩法，模组生存区将满足你！我们精心挑选了多种模组，带来全新的方块、生物、道具和机制，拓展你的游戏体验。</p>
+                    <ul class="features">
+                        <li><i class="fas fa-check-circle"></i> 精选优化模组</li>
+                        <li><i class="fas fa-check-circle"></i> 独特游戏机制</li>
+                    </ul>
+                </div>
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='img/Mods.png') }}" alt="模组生存" class="rotate-image">
+                    <div class="image-overlay">
+                        <p>丰富的模组内容</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bedwars" class="gameplay-section">
+        <div class="container">
+            <h2><i class="fas fa-trophy"></i> 1.8.9 起床战争</h2>
+            <div class="content-wrapper">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='img/BedWays.png') }}" alt="起床战争" class="rotate-image">
+                    <div class="image-overlay">
+                        <p>刺激的PVP对战</p>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <p>紧张刺激的 PvP 体验！保护你的床，摧毁对手的床，成为最后的胜利者。快节奏的对战，考验你的策略与操作！</p>
+                    <ul class="features">
+                        <li><i class="fas fa-check-circle"></i> 多地图选择</li>
+                        <li><i class="fas fa-check-circle"></i> 公平竞技环境</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join-us" class="join-us-section light-bg">
+        <div class="container">
+            <h2>加入我们</h2>
+            <p class="subtitle">欢迎所有玩家加入 MapleStory（枫物语）大家庭！</p>
+            
+            <div class="join-options">
+                <div class="join-option">
+                    <div class="icon-circle">
+                        <i class="fas fa-copy"></i>
+                    </div>
+                    <h3>复制群号</h3>
+                    <p>服务器QQ群号：<span>152639910</span></p>
+                    <button class="btn copy-btn" data-clipboard-text="152639910">复制群号</button>
+                </div>
+                
+                <div class="join-option">
+                    <div class="icon-circle">
+                        <i class="fab fa-qq"></i>
+                    </div>
+                    <h3>快捷加群</h3>
+                    <p>一键加入QQ群</p>
+                    <a href="https://qm.qq.com/q/6QPPLMT1s" target="_blank" class="btn">
+                        加入QQ群
+                    </a>
+                </div>
+                
+                <div class="join-option">
+                    <div class="icon-circle">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>扫描二维码</h3>
+                    <p>使用QQ扫码加入</p>
+                    <img src="{{ url_for('static', filename='img/QR.png') }}" alt="QQ群二维码" class="qr-code">
+                </div>
+            </div>
+            
+            
+            <p class="join-footer">期待在服务器中与你相遇！</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="{{ url_for('static', filename='img/icon.png') }}" alt="MapleStory Logo">
+                    <div>
+                        <h3>MapleStory（枫物语）</h3>
+                        <p>探索无限可能的方块世界</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#hero"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="#vanilla-survival"><i class="fas fa-tree"></i> 原版生存</a></li>
+                        <li><a href="#mod-survival"><i class="fas fa-cogs"></i> 模组生存</a></li>
+                        <li><a href="#bedwars"><i class="fas fa-trophy"></i> 起床战争</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <div class="social-icons">
+                        <a href="https://qm.qq.com/q/6QPPLMT1s" title="加入QQ群"><i class="fab fa-qq"></i></a>
+                        <a href="https://space.bilibili.com/511204383" title="联系服主"><i class="fab fa-bilibili"></i></a>
+                        <a href="https://space.bilibili.com/3546390923839958" title="网页开发"><i class="fas fa-code"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MapleStory（枫物语）服务器. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for Minecraft Players</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script>
+        // 初始化 clipboard.js
+        new ClipboardJS('.copy-btn');
+        
+        // 添加复制成功提示
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const originalText = this.textContent;
+                this.innerHTML = '<i class="fas fa-check"></i> 已复制';
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
